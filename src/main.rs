@@ -3,6 +3,7 @@ mod sort;
 mod hanoi;
 mod n_queen;
 mod permutations;
+mod LIS;
 
 use hanoi::test_hanoi;
 use permutations::test_permutations;
