@@ -1,5 +1,4 @@
 use std::cmp::max;
-use std::mem::size_of;
 
 // 最长公共子序列
 fn lcs(x: String, y: String) -> usize {
@@ -16,8 +15,8 @@ fn lcs(x: String, y: String) -> usize {
         dp[0][j] = 0;
     }
 
-    for i in 1..len_x + 1 {
-        for j in 1..len_y + 1 {
+    for i in 1..=len_x {
+        for j in 1..=len_y {
             if x.as_bytes()[i - 1] == y.as_bytes()[j - 1] {
                 dp[i][j] = dp[i - 1][j - 1] + 1;
             } else {

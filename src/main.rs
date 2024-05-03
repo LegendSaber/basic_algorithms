@@ -5,6 +5,7 @@ mod n_queen;
 mod permutations;
 mod lis;
 mod lcs;
+mod bag01;
 
 use hanoi::test_hanoi;
 use permutations::test_permutations;

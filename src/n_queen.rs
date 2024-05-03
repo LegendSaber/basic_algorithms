@@ -14,7 +14,7 @@ fn backtrack(i: usize, place: &mut [i32], n: usize, sum: &mut usize) {
     if i > n {
         *sum += 1;
     } else {
-        for j in 1..n + 1 {
+        for j in 1..=n {
             place[i] = j as i32;     // 第i行下到第j列
             if is_ok(i, place) {
                 backtrack(i + 1, place, n, sum);

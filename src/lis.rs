@@ -5,11 +5,11 @@ fn lis(dp: &mut [usize], a: &[usize], len: usize) -> usize {
     let mut max_len = 0;
 
     dp[0] = 0;
-    for i in 1..len + 1 {
+    for i in 1..= len {
         dp[i] = 1;
     }
 
-    for i in 1.. len + 1 {
+    for i in 1..= len {
         for j in 1..i {
             if a[i - 1] > a[j - 1] {
                 dp[i] = max(dp[i], dp[j] + 1);
@@ -17,7 +17,7 @@ fn lis(dp: &mut [usize], a: &[usize], len: usize) -> usize {
         }
     }
 
-    for i in 1..len + 1 {
+    for i in 1..= len  {
         max_len = max(max_len, dp[i]);
     }
 
