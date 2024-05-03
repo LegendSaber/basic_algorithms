@@ -1,5 +1,6 @@
 use std::cmp::max;
 
+// 最长上升子序列
 fn lis(dp: &mut [usize], a: &[usize], len: usize) -> usize {
     let mut max_len = 0;
 
@@ -25,7 +26,7 @@ fn lis(dp: &mut [usize], a: &[usize], len: usize) -> usize {
 
 #[cfg(test)]
 mod test {
-    use crate::LIS::lis;
+    use crate::lis::lis;
     #[test]
     fn test() {
         let mut dp = [0, 0, 0, 0, 0, 0];
