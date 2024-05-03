@@ -2,7 +2,7 @@
 fn is_ok(x: usize, place: &mut [i32]) -> bool {
 
     for k in 1.. x {
-        if place[k] == place[x] || ((place[x] - place[k]) as i32).abs() == ((x - k) as i32).abs() {
+        if place[k] == place[x] || (place[x] - place[k]).abs() == ((x - k) as i32).abs() {
             return false;
         }
     }
